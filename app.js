@@ -18,9 +18,9 @@ app.use((req, res, next) => {
 
 app.get("/posts", async (req, res) => {
   const storedPosts = await getStoredPosts();
-  // remove this to make web app fast again
-  await new Promise((resolve, reject) => setTimeout(() => resolve(), 1500));
-  // remove this to make web app fast again
+  // comment this out to make web app fast again
+  // await new Promise((resolve, reject) => setTimeout(() => resolve(), 1500));
+  // comment this out to make web app fast again
   res.json({ posts: storedPosts });
 });
 
